@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@theme inline {
+  --color-bg: var(--bg); --color-panel: var(--panel); --color-fg: var(--fg);
+  --color-mute: var(--mute); --color-line: var(--line); --color-acc: var(--acc); --color-cy: var(--cy);
+  --font-sans: Inter, "Geist", system-ui, sans-serif;
+}
+:root { --bg:#0c0c12; --panel:#14141d; --fg:#ececf4; --mute:#9d9db3; --line:#262634; --acc:#8b5cf6; --cy:#22d3ee; }
+:root.light { --bg:#f5f5fa; --panel:#ffffff; --fg:#15151e; --mute:#575770; --line:#e1e1ec; --acc:#6d28d9; --cy:#0e7490; }
+body { font-family: var(--font-sans); color: var(--fg);
+  background: radial-gradient(900px 380px at 85% -10%, color-mix(in srgb, var(--acc) 16%, transparent), transparent), var(--bg); }
+:focus-visible { outline: 2px solid var(--cy); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
